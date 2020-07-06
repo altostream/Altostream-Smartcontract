@@ -1,0 +1,47 @@
+{
+  "name": "Alto",
+  "version": "1.0.0",
+  "description": "Testing boilerplate",
+  "main": "",
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run pre-push",
+      "pre-commit": "npm run pre-commit"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "openzeppelin",
+    "truffle",
+    "react",
+    "dapp",
+    "infura",
+    "metamask",
+    "web3",
+    "ganache",
+    "web3js",
+    "ethereum",
+    "smart-contracts"
+  ],
+  "author": "Daniel",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0",
+    "@openzeppelin/upgrades": "^2.6.0",
+    "dotenv": "^6.2.0",
+    "truffle-hdwallet-provider@next": "^1.0.3",
+    "@opengsn/gsn": "^0.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "husky": "^3.1.0"
+  }
+}
