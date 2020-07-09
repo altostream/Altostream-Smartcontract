@@ -14,7 +14,7 @@ IERC20 private _token;
     address owner;
     uint _bal;
 
-event trackAdded(address indexed uploader,bytes32 songMeta);
+event trackAdded(address indexed uploader,bytes32 songMeta,uint now);
 event payed(address indexed beneficiary, uint256 amountPayed);
 
 constructor (IERC20 token,address _forwarder) public {
@@ -67,7 +67,7 @@ function addTrack(address uploader) public returns(bytes32 meta){
     meta = (keccak256 (abi.encodePacked (now ,_msgSender())));
     trackOwners[_msgSender()].owner = uploader;
     TrackMetas[meta].metadata = meta;
-    emit trackAdded (uploader,meta); 
+    emit trackAdded (uploader,meta,now);
     metadatas.push(meta);
     return(meta);
    

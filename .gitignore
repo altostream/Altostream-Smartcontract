@@ -97,6 +97,9 @@ _archive
 uploads
 tmp
 node_modules
+bin
+build
+
 
 # files to ignore #
 ###################

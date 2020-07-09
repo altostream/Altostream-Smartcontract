@@ -1,33 +1,19 @@
-const {accounts,contract} =require('@openzeppelin/test-environment');
-const {expect} = require ('chai');
-const truffleAssert=require('truffle-assertions');
+const { soliditySha3 } = require("web3-utils");
+const { equal } = require("assert");
+const rewarder= artifacts.require("TrackRewarder");
+
 
 let timestamp;
-let blockNumber;
-let meta;
+const addr= "0x52cb68556dcD235153eA6ED31270dbb3F0F19daB";
+contract( 'TrackRewarder',(accounts) => {
+    it('should return track metadata given uploader address',async ()=>{
+        timestamp= await web3.eth.getBlock("latest").timestamp;
+        const rewardInstance=await rewarder.deployed();
+        const metadata=(await rewardInstance.addTrack(addr));
+        const toEqual= soliditySha3 (timestamp ,addr);
+        assert.equal(metadata,equal,"should return metadata");
+    });    
+        
 
-const alto=contract.fromArtifact('TrackRewarder');
-
-blockNumber=web3.eth.blockNumber;
-timestamp=web3.eth.getBlock(blockNumber).timestamp;
-
-describe('alto',function(){
-    const [owner]=accounts;
-
-    beforeEach(async function(){
-        this.contract=await alto.new({from: owner});
     });
 
-it("accepts address and emits the meta of the song based on block timestamp",async function(){
-    let tx=await alto.addTrack("0xF3a57FAbea6e198403864640061E3abc168cee80");
-    meta=web3.utils.keccak256(timestamp,"0xF3a57FAbea6e198403864640061E3abc168cee80");
-    truffleAssert.eventEmitted("0xF3a57FAbea6e198403864640061E3abc168cee80", meta,(ev) => {
-        return meta === tx;
-    });
-    
-
-    
-
-})
-
-});

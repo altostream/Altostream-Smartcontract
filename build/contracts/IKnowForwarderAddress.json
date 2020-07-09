@@ -26,14 +26,14 @@
     "absolutePath": "/home/null/Desktop/Alto 2/node_modules/@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol",
     "exportedSymbols": {
       "IKnowForwarderAddress": [
-        938
+        1781
       ]
     },
-    "id": 939,
+    "id": 1782,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 932,
+        "id": 1775,
         "literals": [
           "solidity",
           "^",
@@ -41,7 +41,7 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "31:23:6"
+        "src": "31:23:9"
       },
       {
         "abstract": false,
@@ -50,9 +50,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 938,
+        "id": 1781,
         "linearizedBaseContracts": [
-          938
+          1781
         ],
         "name": "IKnowForwarderAddress",
         "nodeType": "ContractDefinition",
@@ -61,7 +61,7 @@
             "body": null,
             "documentation": "return the forwarder we trust to forward relayed transactions to us.\nthe forwarder is required to verify the sender's signature, and verify\nthe call is not a replay.",
             "functionSelector": "ce1b815f",
-            "id": 937,
+            "id": 1780,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -69,23 +69,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 933,
+              "id": 1776,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "326:2:6"
+              "src": "326:2:9"
             },
             "returnParameters": {
-              "id": 936,
+              "id": 1779,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 935,
+                  "id": 1778,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 937,
-                  "src": "351:7:6",
+                  "scope": 1780,
+                  "src": "351:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -93,10 +93,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 934,
+                    "id": 1777,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "351:7:6",
+                    "src": "351:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -107,33 +107,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "350:9:6"
+              "src": "350:9:9"
             },
-            "scope": 938,
-            "src": "298:62:6",
+            "scope": 1781,
+            "src": "298:62:9",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 939,
-        "src": "56:306:6"
+        "scope": 1782,
+        "src": "56:306:9"
       }
     ],
-    "src": "31:332:6"
+    "src": "31:332:9"
   },
   "legacyAST": {
     "absolutePath": "/home/null/Desktop/Alto 2/node_modules/@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol",
     "exportedSymbols": {
       "IKnowForwarderAddress": [
-        938
+        1781
       ]
     },
-    "id": 939,
+    "id": 1782,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 932,
+        "id": 1775,
         "literals": [
           "solidity",
           "^",
@@ -141,7 +141,7 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "31:23:6"
+        "src": "31:23:9"
       },
       {
         "abstract": false,
@@ -150,9 +150,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 938,
+        "id": 1781,
         "linearizedBaseContracts": [
-          938
+          1781
         ],
         "name": "IKnowForwarderAddress",
         "nodeType": "ContractDefinition",
@@ -161,7 +161,7 @@
             "body": null,
             "documentation": "return the forwarder we trust to forward relayed transactions to us.\nthe forwarder is required to verify the sender's signature, and verify\nthe call is not a replay.",
             "functionSelector": "ce1b815f",
-            "id": 937,
+            "id": 1780,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -169,23 +169,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 933,
+              "id": 1776,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "326:2:6"
+              "src": "326:2:9"
             },
             "returnParameters": {
-              "id": 936,
+              "id": 1779,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 935,
+                  "id": 1778,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 937,
-                  "src": "351:7:6",
+                  "scope": 1780,
+                  "src": "351:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -193,10 +193,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 934,
+                    "id": 1777,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "351:7:6",
+                    "src": "351:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -207,28 +207,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "350:9:6"
+              "src": "350:9:9"
             },
-            "scope": 938,
-            "src": "298:62:6",
+            "scope": 1781,
+            "src": "298:62:9",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 939,
-        "src": "56:306:6"
+        "scope": 1782,
+        "src": "56:306:9"
       }
     ],
-    "src": "31:332:6"
+    "src": "31:332:9"
   },
   "compiler": {
     "name": "solc",
     "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-03T20:49:58.297Z",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-08T18:46:13.558Z",
   "devdoc": {
     "methods": {}
   },
