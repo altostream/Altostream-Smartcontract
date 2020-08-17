@@ -64,7 +64,7 @@ mapping(address=>Uploader) voteCount;
 //}
 
 function addTrack(address uploader) public returns(bytes32 meta){
-    meta = (keccak256 (abi.encodePacked (now ,_msgSender())));
+    meta = (keccak256 (abi.encodePacked (now ,uploader)));
     trackOwners[_msgSender()].owner = uploader;
     TrackMetas[meta].metadata = meta;
     emit trackAdded (uploader,meta,now);
