@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity ^0.6.2;
 
-pragma experimental ABIEncoderV2;
+//pragma experimental ABIEncoderV2;
 //import "../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "../node_modules/@opengsn/gsn/contracts/BaseRelayRecipient.sol";
-import "../node_modules/@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol";
+//import "../node_modules/@opengsn/gsn/contracts/BaseRelayRecipient.sol";
+//import "../node_modules/@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol";
 
-contract TrackRewarder is IKnowForwarderAddress,BaseRelayRecipient{
+contract TrackRewarder{
 
 
 IERC20 private _token;
@@ -17,10 +17,9 @@ IERC20 private _token;
 event trackAdded(address indexed uploader,bytes32 songMeta,uint now);
 event payed(address indexed beneficiary, uint256 amountPayed);
 
-constructor (IERC20 token,address _forwarder) public {
-    owner = _msgSender();
+constructor (IERC20 token) public {
+    owner = msg.sender;
     _token = token;
-   trustedForwarder = _forwarder;
 }
 
 
@@ -31,7 +30,7 @@ uint timeUploaded;
 }
 
 modifier onlyOwner{
-    require(_msgSender() == owner, "you are not the owner");
+    require(msg.sender == owner, "you are not the owner");
         _;
 }
 //uint streams;  Taken care of in the backend
@@ -65,7 +64,7 @@ mapping(address=>Uploader) voteCount;
 
 function addTrack(address uploader) public returns(bytes32 meta){
     meta = (keccak256 (abi.encodePacked (now ,uploader)));
-    trackOwners[_msgSender()].owner = uploader;
+    trackOwners[(msg.sender)].owner = uploader;
     TrackMetas[meta].metadata = meta;
     emit trackAdded (uploader,meta,now);
     metadatas.push(meta);
@@ -98,14 +97,14 @@ function addTrack(address uploader) public returns(bytes32 meta){
         
     }
 
-  	function versionRecipient() external virtual view override returns (string memory) {
+  /*	function versionRecipient() external virtual view override returns (string memory) {
 		return "1.0";
 	}
 
-    function getTrustedForwarder() public view override returns(address) {
+   function getTrustedForwarder() public view override returns(address) {
 		return trustedForwarder;
 	}
-    
+    */
 }
 
 

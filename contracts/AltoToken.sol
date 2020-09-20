@@ -6,7 +6,7 @@ pragma solidity ^0.6.2;
 // Deployed to : msg.sender
 // Symbol      : ALTO
 // Name        : ALTOSTREAM
-// Total supply: 10000000
+// Total supply: 25000000
 // Decimals    : 18
 
 // ----------------------------------------------------------------------------
@@ -110,7 +110,7 @@ contract ALTOSTREAM is ERC20Interface, Owned, SafeMath {
         symbol = "ALTO";
         name = "ALTO TOKEN";
         decimals = 18;
-        _totalSupply = 25000000;
+        _totalSupply = 25000000*10**uint(decimals);
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
