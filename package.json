@@ -38,6 +38,7 @@
     "@openzeppelin/contracts": "^2.4.0",
     "@openzeppelin/upgrades": "^2.6.0",
     "@truffle/hdwallet-provider": "^1.0.37",
+    "avalanche": "^2.6.2",
     "dotenv": "^6.2.0"
   },
   "devDependencies": {
