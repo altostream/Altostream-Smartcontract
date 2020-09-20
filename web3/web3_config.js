@@ -4,7 +4,7 @@ require("dotenv").config();
 const provider = new Web3.providers.HttpProvider(process.env.BLOCKCHAINSERVER);
 const web3 = new Web3(provider);
 const main = process.env.MAINCONTRACT;
-//const token = process.env.TOKENCONTRACT;
+const token = process.env.TOKENCONTRACT;
 //const paymaster = process.env.PAYMASTERCONTRACT;
 //const relayHub = process.env.RELAYHUBCONTRACT;
 //const forwarder = process.env.FORWARDERCONTRACT;
