@@ -5,7 +5,6 @@ Use truffle migrate to deploy and migrate all contracts
 
 ![image](arch.png)
 
-
 ## To start interacting with contract:
 Main contract:0x405bbC6062dED912A4d2a165C6FC57A10248312f(rinkeby testnet)
 
