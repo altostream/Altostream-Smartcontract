@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0
+
 pragma solidity ^0.6.2;
 
 // ----------------------------------------------------------------------------
@@ -36,7 +38,7 @@ contract SafeMath {
 // ERC Token Standard #20 Interface
 // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
 // ----------------------------------------------------------------------------
-abstract contract ERC20Interface {
+abstract contract CRC20Interface {
     function totalSupply() public view virtual returns (uint);
     function balanceOf(address tokenOwner) public view virtual  returns (uint balance);
     function allowance(address tokenOwner, address spender) public view virtual  returns (uint remaining);
@@ -93,7 +95,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract ALTO TOKEN is ERC20Interface, Owned, SafeMath {
+contract ALTOTOKEN is CRC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -110,7 +112,7 @@ contract ALTO TOKEN is ERC20Interface, Owned, SafeMath {
         symbol = "ALTO";
         name = "ALTO TOKEN";
         decimals = 18;
-        _totalSupply = 1000000000;
+        _totalSupply = (1000000000 * 10**18);
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
@@ -200,18 +202,18 @@ contract ALTO TOKEN is ERC20Interface, Owned, SafeMath {
     }
 
 
-    // ------------------------------------------------------------------------
-    // Don't accept ETH
-    // ------------------------------------------------------------------------
-    fallback() external payable {
-        revert();
-    }
+    // // ------------------------------------------------------------------------
+    // // Don't accept ETH
+    // // ------------------------------------------------------------------------
+    // fallback() external payable {
+    //     revert();
+    // }
 
 
     // ------------------------------------------------------------------------
     // Owner can transfer out any accidentally sent ERC20 tokens
     // ------------------------------------------------------------------------
-    function transferAnyERC20Token(address tokenAddress, uint tokens) public onlyOwner returns (bool success) {
-        return ERC20Interface(tokenAddress).transfer(owner, tokens);
+    function transferAnyCRC20Token(address tokenAddress, uint tokens) public onlyOwner returns (bool success) {
+        return CRC20Interface(tokenAddress).transfer(owner, tokens);
     }
 }
